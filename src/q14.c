@@ -13,9 +13,11 @@ int main() {
     }
     while ((ch = fgetc(fp)) != EOF) {
         charCount++;
+
         if (ch == '\n') {
             lineCount++;
         }
+
         if (isspace(ch)) {
             inWord = 0;
         } else if (inWord == 0) {
@@ -26,4 +28,9 @@ int main() {
     if (charCount > 0 && ch != '\n') {
         lineCount++;
     }
-    printf("Characters: %d\n",
+    printf("Characters: %d\n", charCount);
+    printf("Words: %d\n", wordCount);
+    printf("Lines: %d\n", lineCount);
+    fclose(fp);
+    return 0;
+}
