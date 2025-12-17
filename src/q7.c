@@ -1,13 +1,11 @@
 // Write a C program that defines a structure Employee with members: name, employee ID, and salary. 
 // Take input for 5 employees and display the details of the employee with the highest salary.
 #include <stdio.h>
-
 struct Employee {
     char name[50];
     int id;
     float salary;
 };
-
 int main() {
     struct Employee emp[5];
     int i, maxIndex = 0;
@@ -32,6 +30,5 @@ int main() {
     printf("Name: %s\n", emp[maxIndex].name);
     printf("Employee ID: %d\n", emp[maxIndex].id);
     printf("Salary: %.2f\n", emp[maxIndex].salary);
-
     return 0;
 }
