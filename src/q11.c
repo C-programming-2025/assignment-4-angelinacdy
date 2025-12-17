@@ -5,17 +5,14 @@ int main() {
     FILE *fp;
     char str[100];
     printf("Enter a string to write to the file: ");
-    scanf("%[^\n]", str);  /
+    scanf("%[^\n]", str);  
     fp = fopen("output.txt", "w");
-
     if (fp == NULL) {
         printf("Error opening file.\n");
         return 1;
     }
     fprintf(fp, "%s", str);
     fclose(fp);
-
     printf("File written successfully.\n");
-
     return 0;
 }
